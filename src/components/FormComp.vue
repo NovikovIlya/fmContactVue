@@ -1,8 +1,11 @@
 <script setup lang="ts">
-import { ref } from "vue";
 
-const send = () => {
-  alert("Your message has been sent!");
+
+const send = (e: any) => {
+  alert(
+    `name: ${e.target["fname"].value}, email: ${e.target["email"].value}, message: ${e.target["message"].value}
+    `
+  );
 };
 </script>
 
@@ -12,7 +15,13 @@ const send = () => {
     <form @submit.prevent="send">
       <div>
         <label for="fname">First Name</label>
-        <input required type="text" id="fname" name="fname" placeholder="Your name.." />
+        <input
+          required
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Your name.."
+        />
       </div>
 
       <div>
@@ -27,7 +36,7 @@ const send = () => {
       </div>
 
       <div class="gg">
-        <label  for="email">Email Address</label>
+        <label for="email">Email Address</label>
         <input
           required
           type="email"
@@ -47,7 +56,7 @@ const send = () => {
           name="query-type"
           value="general-enquiry"
         />
-        <label class="lab " for="general-enquiry">General Enquiry</label>
+        <label class="lab" for="general-enquiry">General Enquiry</label>
       </div>
 
       <div class="rr">
@@ -64,16 +73,14 @@ const send = () => {
 
       <div class="gg">
         <label for="message ">Message</label>
-        <textarea
-          required
-          id="message"
-          name="message"
-        ></textarea>
+        <textarea required id="message" name="message"></textarea>
       </div>
 
-      <div class="gg vv ">
+      <div class="gg vv">
         <input required type="checkbox" id="consent" name="consent" />
-        <label class="cons mm"for="consent">I consent to being contacted by the team</label>
+        <label class="cons mm" for="consent"
+          >I consent to being contacted by the team</label
+        >
       </div>
 
       <button class="gg zz" type="submit">Sumbit</button>
@@ -95,7 +102,7 @@ form {
   border: 1px solid #ccc;
   border-radius: 10px;
 }
-.cons{
+.cons {
   font-size: 11px;
 }
 .gg {
@@ -112,22 +119,21 @@ form {
   background-color: #45a049;
   color: white;
   border-radius: 8px;
-  border:0;
+  border: 0;
 }
-.zz:hover{
+.zz:hover {
   cursor: pointer;
 }
 .rr {
-  border:  1px solid #ccc;
+  border: 1px solid #ccc;
   width: 100%;
-  padding:10px;
+  padding: 10px;
 }
-.bbv{
+.bbv {
   margin-bottom: 0;
 }
-.mm{
+.mm {
   margin-bottom: 0;
-
 }
 h1 {
   text-align: left;
@@ -137,7 +143,7 @@ h1 {
 label {
   display: block;
   font-size: 11px;
-  margin-bottom: 5px
+  margin-bottom: 5px;
 }
 
 input[type="text"],
@@ -195,14 +201,11 @@ input[type="submit"]:hover {
     padding: 10px;
   }
 
- form{
-  grid-template-columns: 100%;
-
- }
- .gg{
-  grid-column: 1/2;
-
- }
-  
+  form {
+    grid-template-columns: 100%;
+  }
+  .gg {
+    grid-column: 1/2;
+  }
 }
 </style>
