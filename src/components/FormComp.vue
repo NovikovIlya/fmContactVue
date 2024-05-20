@@ -27,7 +27,7 @@ const send = () => {
       </div>
 
       <div class="gg">
-        <label for="email">Email Address</label>
+        <label  for="email">Email Address</label>
         <input
           required
           type="email"
@@ -36,7 +36,7 @@ const send = () => {
           placeholder="Your email.."
         />
       </div>
-      <label class="gg" for="query">Query Type</label>
+      <label class="gg bbv" for="query">Query Type</label>
 
       <div class="rr">
         <input
@@ -47,7 +47,7 @@ const send = () => {
           name="query-type"
           value="general-enquiry"
         />
-        <label class="lab" for="general-enquiry">General Enquiry</label>
+        <label class="lab " for="general-enquiry">General Enquiry</label>
       </div>
 
       <div class="rr">
@@ -73,7 +73,7 @@ const send = () => {
 
       <div class="gg vv ">
         <input required type="checkbox" id="consent" name="consent" />
-        <label class="cons"for="consent">I consent to being contacted by the team</label>
+        <label class="cons mm"for="consent">I consent to being contacted by the team</label>
       </div>
 
       <button class="gg zz" type="submit">Sumbit</button>
@@ -111,6 +111,8 @@ form {
   height: 40px;
   background-color: #45a049;
   color: white;
+  border-radius: 8px;
+  border:0;
 }
 .zz:hover{
   cursor: pointer;
@@ -120,6 +122,13 @@ form {
   width: 100%;
   padding:10px;
 }
+.bbv{
+  margin-bottom: 0;
+}
+.mm{
+  margin-bottom: 0;
+
+}
 h1 {
   text-align: left;
   margin-bottom: 20px;
@@ -127,6 +136,8 @@ h1 {
 
 label {
   display: block;
+  font-size: 11px;
+  margin-bottom: 5px
 }
 
 input[type="text"],
