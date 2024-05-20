@@ -118,6 +118,7 @@ form {
 .rr {
   border:  1px solid #ccc;
   width: 100%;
+  padding:10px;
 }
 h1 {
   text-align: left;
@@ -134,7 +135,8 @@ textarea {
   width: 100%;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  padding: 0;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 input[type="checkbox"] {
